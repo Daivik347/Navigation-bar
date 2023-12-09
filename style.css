@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image:url(https://media.istockphoto.com/id/1391249821/photo/pampas-grass-in-nature.jpg?s=612x612&w=0&k=20&c=l4OhFOlHIMfkEXp_0EE46Tdj6LCj12M-7X1UB1D1OSY=);
+   
+    background-size:cover ;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+nav{
+    border: 1px solid #fffa;
+    background: #fff4;
+    backdrop-filter:blur(lrem);
+    box-shadow: 0 20px 30px -10px #0004;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 70%;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    gap : 1rem;
+}
+li{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+}
+Li:hover span::before{
+    top:-5px;
+}
+Li:hover span::after{
+    top: 1.5rem;
+}
+span{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap : 0;
+    position: relative;
+    overflow: hidden;
+    color: transparent;
+    max-height: 1.7rem;
+}
+
+span::before{
+    content: attr(text);
+    color:lightcoral;;
+    position: absolute;
+    top:-2rem;
+    transition: 0.3s;
+}
+
+span::after{
+    content: attr(text);
+    position: absolute;
+    color: black;
+    top: -5px;
+    transition: 0.3s;
+}
+
+span:nth-child(2)::after,
+span:nth-child(2)::before{
+    transition-delay: 50ms;
+}
+
+span:nth-child(3)::after,
+span:nth-child(3)::before{
+    transition-delay: 100ms;
+}
+
+span:nth-child(4)::after,
+span:nth-child(4)::before{
+   transition-delay: 150ms;
+}
+
+span:nth-child(5)::after,
+span:nth-child(5)::before{
+    transition-delay: 200ms ;
+}
+
+span:nth-child(6)::after,
+span:nth-child(6)::before{
+    transition-delay: 250ms;
+}
+
+span:nth-child(7)::after,
+span:nth-child(7)::before{
+    transition-delay: 300ms ;
+}
